@@ -8,13 +8,39 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'> 
+    <link href="https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
-    <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.min.js"></script>
     <link href="style.css" rel="stylesheet">
     <script src="wiki.js"></script>
   </head>
   <body>
+    <div class="container">
+      <div id="title" class="text-center vertical-align">
+        <div>
+        <h1>Wikipedia Search</h1>
+        <div id="search">
+          <div class="input-group">
+            <input id="searchInput" type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+            </span>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div id="noresult" style="display:none">
+        <label></label>
+      </div>
+      <div id="result" class="row" data-bind="foreach: data">
+        <div class="col-md-12">
+          <a target="_blank" class="href" data-bind="attr: {href: href}">
+            <div class="name"><label data-bind="text: name"></label></div>
+            <div class="desc" data-bind="text: desc"></div>
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

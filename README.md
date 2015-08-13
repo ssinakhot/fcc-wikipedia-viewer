@@ -8,4 +8,4 @@ Features:
 
 Codepen:
 
-http://codepen.io/xolus/pen/OVGzVX
+http://codepen.io/xolus/full/OVGzVX

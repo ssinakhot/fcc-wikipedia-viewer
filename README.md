@@ -7,3 +7,5 @@ Features:
 - Autocomplete for search box
 
 Codepen:
+
+http://codepen.io/xolus/pen/OVGzVX
